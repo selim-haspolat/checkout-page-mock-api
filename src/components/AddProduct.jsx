@@ -82,6 +82,7 @@ const AddProduct = () => {
             sizing="sm"
             maxLength="20"
             required
+            placeholder="Product"
           />
         </div>
         <div className="mb-3">
@@ -96,6 +97,7 @@ const AddProduct = () => {
             type="number"
             sizing="sm"
             required
+            placeholder="Price"
           />
         </div>
         <div className="mb-3">
@@ -110,6 +112,7 @@ const AddProduct = () => {
             type="url"
             sizing="sm"
             required
+            placeholder="url"
           />
         </div>
         <div id="textarea" className="dark mb-3">
