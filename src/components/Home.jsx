@@ -13,7 +13,7 @@ const Home = () => {
         "https://63f2206c4f17278c9a20b961.mockapi.io/items"
       );
       const data = res.data;
-      const filterData = data.filter((i) => (i.productName.includes(search) && i.productTag.includes(active)));
+      const filterData = data.filter((i) => (i.productName.toLowerCase().includes(search.toLowerCase()) && i.productTag.includes(active)));
       setData(filterData);
     };
     getData(item);
