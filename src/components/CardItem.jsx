@@ -13,10 +13,10 @@ const CardItem = ({
 }) => {
   const [show, setShow] = useState(false);
   return (
-    <div className="dark mx-auto">
-      <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-full dark mx-auto">
+      <div className="w-full h-[385px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <img
-          className="rounded-t-lg h-64 w-[382px] object-cover object-center"
+          className="rounded-t-lg w-full h-64 object-cover object-center"
           src={productImage}
           alt={productName}
         />
