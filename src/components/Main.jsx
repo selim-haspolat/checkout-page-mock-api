@@ -8,7 +8,7 @@ const Main = () => {
   const [page, setPage] = useState("Home");
 
   return (
-    <div className="min-h-[100vh]">
+    <div className="">
       <Navbar setPage={setPage} />
       {page === "Home" ? <Home /> : <Admin />}
     </div>

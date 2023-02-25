@@ -13,24 +13,28 @@ const Home = () => {
         "https://63f2206c4f17278c9a20b961.mockapi.io/items"
       );
       const data = res.data;
-      const filterData = data.filter((i) => (i.productName.toLowerCase().includes(search.toLowerCase()) && i.productTag.includes(active)));
+      const filterData = data.filter(
+        (i) =>
+          i.productName.toLowerCase().includes(search.toLowerCase()) &&
+          i.productTag.includes(active)
+      );
       setData(filterData);
     };
     getData(item);
-  }, [item,active]);
+  }, [item, active]);
 
   return (
-    <div className="px-10 py-5">
+    <div className="px-10 py-5 bg-slate-700 min-h-[calc(100vh-73px)]">
       <input
         onChange={(e) => setItem(e.target.value)}
         type="search"
-        className="border rounded-lg w-96 border-slate-400 outline-none py-1 block mx-auto text-slate-800"
+        className="border rounded-lg w-60 sm:w-96 border-slate-400 outline-none py-1 block mx-auto text-slate-800"
         placeholder="Search Item"
       />
 
       <div className="grid grid-cols-3 md:grid-cols-6 max-w-[1000px] mx-auto gap-3 my-5 pb-5 border-b">
         <button
-          onClick={(e) => setActive('')}
+          onClick={(e) => setActive("")}
           className={`hover:bg-gray-700 transition  px-2 py-1 rounded-lg ${
             active === "" && "!bg-gray-300 text-slate-900"
           }`}
@@ -39,7 +43,7 @@ const Home = () => {
         </button>
         <button
           onClick={(e) => setActive(e.target.innerText)}
-          onDoubleClick={() => setActive('')}
+          onDoubleClick={() => setActive("")}
           className={`hover:bg-gray-700 transition  px-2 py-1 rounded-lg ${
             active === "Elektronik" && "!bg-gray-300 text-slate-900"
           }`}
