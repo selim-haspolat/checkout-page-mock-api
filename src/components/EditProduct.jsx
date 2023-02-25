@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 
 const EditProduct = () => {
   const [editId, setEditId] = useState("");
+  const [displayEdit, setDisplayEdit] = useState(false)
   const [productData, setProductData] = useState({
     productName: "",
     productPrice: 0,
@@ -20,6 +21,7 @@ const EditProduct = () => {
         "https://63f2206c4f17278c9a20b961.mockapi.io/items/" + editId
       );
       setProductData(data);
+      setDisplayEdit(true)
       e.target.reset();
     } catch (error) {
       const Toast = Swal.mixin({
@@ -64,6 +66,7 @@ const EditProduct = () => {
         icon: "success",
         title: "Güncelleme Başarili",
       });
+      setDisplayEdit(false)
     } catch (error) {
       await axios.put(
         "https://63f2206c4f17278c9a20b961.mockapi.io/items/" + editId,
@@ -112,7 +115,7 @@ const EditProduct = () => {
           Find
         </button>
       </form>
-      <form onSubmit={postData} className="dark">
+      <form onSubmit={postData} className={`${displayEdit || 'hidden'} dark`}>
         <div className="mb-3">
           <div className="mb-2 block">
             <Label htmlFor="small" value="Product Title" />
