@@ -6,8 +6,6 @@ const Admin = () => {
 
   const [panel, setPanel] = useState('Profile')
 
-  console.log(panel);
-
   return (
     <div className="h-[calc(100vh-72px)] p-5 grid grid-rows-5 grid-cols-12 gap-7 bg-slate-700">
       <div className="row-span-2 col-span-3 lg:col-span-2 flex flex-col gap-3 p-2 text-center bg-slate-800 text-white rounded-md overflow-auto">
