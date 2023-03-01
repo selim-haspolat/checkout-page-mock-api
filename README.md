@@ -1,3 +1,12 @@
+# Checkout-Page
+
+## Outcome
+![check-ou](https://user-images.githubusercontent.com/118964736/222229281-fe88f686-a6d9-43b0-9532-cb35a7e21865.gif)
+
+### What i used
+- ReactJs
+- Tailwindcss
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
