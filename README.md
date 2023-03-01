@@ -1,10 +1,12 @@
 # Checkout-Page
 
 ## Outcome
-![check-ou](https://user-images.githubusercontent.com/118964736/222229281-fe88f686-a6d9-43b0-9532-cb35a7e21865.gif)
+![check-out](https://user-images.githubusercontent.com/118964736/222230935-2565e5af-57bd-4598-a04b-c3ad9a112905.gif)
 
 ### What i used
 - ReactJs
+- Mock API
+- Axios
 - Tailwindcss
 
 # Getting Started with Create React App
